@@ -36,7 +36,7 @@ mkdir -p "$ARTIFACTS"
 DONE_CANARY="$ARTIFACTS/conda-forge-build-done-${CONFIG}"
 rm -f "$DONE_CANARY"
 
-docker run -it \
+docker run \
            -v "${RECIPE_ROOT}":/home/conda/recipe_root \
            -v "${FEEDSTOCK_ROOT}":/home/conda/feedstock_root \
            -e CONFIG \
